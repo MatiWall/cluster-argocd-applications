@@ -9,25 +9,33 @@ spec:
       repoURL: https://github.com/MatiWall/application-values.git
       revision: master
       directories:
+        - path: docker-registry
+        - path: docker-registry-ui
+      values:
+        namespace: docker-registry
+  - git:
+      repoURL: https://github.com/MatiWall/application-values.git
+      revision: master
+      directories:
       - path: personal-website
         #helm:
         #  valueFiles:
         #  - values.yaml
-      - path: docker-registry
-      - path: docker-registry-ui
+      values:
+        namespace: mw
   template:
-    metadata:
-      name: '{{ .Parameters.repoName }}-{{ .Parameters.appName }}'
+    metadata:c
+      name: '{{ path.path }}'
     spec:
       destination:
-        namespace: '{{ .Parameters.appName }}'
+        namespace: '{{ values.namespace }}'
         server: https://kubernetes.default.svc
       project: default
       source:
         helm:
           valueFiles:
           - values.yaml
-        path: '{{ .Parameters.appName }}'
+        path: '{{ path.path }}'
         repoURL: https://github.com/MatiWall/application-values.git
         targetRevision: HEAD
 
