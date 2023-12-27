@@ -7,8 +7,8 @@ spec:
   generators:
   - git:
       revision: master
+      repoURL: https://github.com/MatiWall/application-values.git
       directories:
-        repoURL: https://github.com/MatiWall/application-values.git
         - path: personal-website
       values:
         namespace: mw

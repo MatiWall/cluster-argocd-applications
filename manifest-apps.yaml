@@ -6,8 +6,9 @@ metadata:
 spec:
   generators:
   - git:
+      repoURL: https://github.com/MatiWall/application-values.git
+      revision: master
       directories:
-        repoURL: https://github.com/MatiWall/application-values.git
         - path: docker-registry
       values:
         namespace: docker-registry
