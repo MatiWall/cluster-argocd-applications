@@ -8,6 +8,7 @@ spec:
   - git:
       revision: master
       directories:
+        repoURL: https://github.com/MatiWall/application-values.git
         - path: personal-website
       values:
         namespace: mw
@@ -26,7 +27,6 @@ spec:
           valueFiles:
             - values.yaml
         path: '{{ path }}'
-        repoURL: https://github.com/MatiWall/application-values.git
         targetRevision: HEAD
       syncPolicy:
         automated:
