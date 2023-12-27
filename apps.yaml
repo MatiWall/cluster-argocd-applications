@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: multiple-apps-set
+  namespace: argocd
+spec:
+  generators:
+  - helm:
+      valueFiles:
+      - values.yaml
+    git:
+      repoURL: https://github.com/MatiWall/application-values.git
+      path: personal-website
+      targetRevision: HEAD
+  - git:
+      repoURL: https://github.com/MatiWall/application-values.git
+      path: docker-registry
+      targetRevision: HEAD
+  - git:
+      repoURL: https://github.com/MatiWall/application-values.git
+      path: docker-registry-ui
+      targetRevision: HEAD
+  template:
+    metadata:
+      name: '{{ .Parameters.repoName }}-{{ .Parameters.appName }}'
+    spec:
+      destination:
+        namespace: '{{ .Parameters.appName }}'
+        server: https://kubernetes.default.svc
+      project: default
+      source:
+        helm:
+          valueFiles:
+          - values.yaml
+        path: '{{ .Parameters.appName }}'
+        repoURL: https://github.com/MatiWall/application-values.git
+        targetRevision: HEAD
+
