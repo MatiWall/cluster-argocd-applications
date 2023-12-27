@@ -10,21 +10,19 @@ spec:
       revision: master
       directories:
         - path: docker-registry
-        #- path: docker-registry-ui
       values:
         namespace: docker-registry
         name: docker-registry
+        helm: false
   - git:
       repoURL: https://github.com/MatiWall/application-values.git
       revision: master
       directories:
         - path: personal-website
-          #helm:
-          #  valueFiles:
-          #  - values.yaml
       values:
         namespace: mw
         name: personal-website
+        helm: true
   template:
     metadata:
       name: '{{ values.name }}'
@@ -34,10 +32,13 @@ spec:
         server: https://kubernetes.default.svc
       project: default
       source:
+        {{- if values.helm }}
         helm:
           valueFiles:
           - values.yaml
+        {{- else }}
         path: '{{ path }}'
         repoURL: https://github.com/MatiWall/application-values.git
         targetRevision: HEAD
+        {{- end }}
 
