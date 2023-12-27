@@ -10,18 +10,21 @@ spec:
       revision: master
       directories:
         - path: docker-registry
-      values:
-        namespace: docker-registry
+          values:
+            namespace: docker-registry
+        - path: docker-registry-ui
+          values:
+            namespace: docker-registry
   template:
     metadata:
-      name: '{{ path }}'
+      name: '{{ .path.basename }}'
     spec:
       destination:
         namespace: '{{ values.namespace }}'
         server: https://kubernetes.default.svc
       project: default
       source:
-        repoURL: https://github.com/MatiWall/application-values.git
+        repoURL: ./
         path: '{{ path }}'
         targetRevision: master
       syncPolicy:
