@@ -12,17 +12,16 @@ spec:
         - path: personal-website
       values:
         namespace: mw
-        name: personal-website
   template:
     metadata:
-      name: '{{ values.name }}'
+      name: '{{ .path.basename }}'
     spec:
       destination:
         namespace: '{{ values.namespace }}'
         server: https://kubernetes.default.svc
       project: default
       source:
-        repoURL: https://github.com/MatiWall/application-values.git
+        repoURL: ./
         helm:
           valueFiles:
             - values.yaml
