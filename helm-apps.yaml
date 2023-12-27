@@ -6,7 +6,6 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/MatiWall/application-values.git
       revision: master
       directories:
         - path: personal-website
@@ -23,13 +22,16 @@ spec:
         server: https://kubernetes.default.svc
       project: default
       source:
-        {{- if values.helm }}
         helm:
           valueFiles:
             - values.yaml
-        {{- else }}
-        path: '{{ .path.path }}'
+        path: '{{ path }}'
         repoURL: https://github.com/MatiWall/application-values.git
         targetRevision: HEAD
-        {{- end }}
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+      syncOptions:
+        - CreateNamespace=true
 
