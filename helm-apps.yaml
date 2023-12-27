@@ -22,6 +22,7 @@ spec:
         server: https://kubernetes.default.svc
       project: default
       source:
+        repoURL: https://github.com/MatiWall/application-values.git
         helm:
           valueFiles:
             - values.yaml
