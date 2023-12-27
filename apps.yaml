@@ -10,9 +10,10 @@ spec:
       revision: master
       directories:
         - path: docker-registry
-        - path: docker-registry-ui
+        #- path: docker-registry-ui
       values:
         namespace: docker-registry
+        name: docker-registry
   - git:
       repoURL: https://github.com/MatiWall/application-values.git
       revision: master
@@ -23,9 +24,10 @@ spec:
           #  - values.yaml
       values:
         namespace: mw
+        name: personal-website
   template:
     metadata:
-      name: '{{ path.basename}}'
+      name: '{{ values.name }}'
     spec:
       destination:
         namespace: '{{ values.namespace }}'
