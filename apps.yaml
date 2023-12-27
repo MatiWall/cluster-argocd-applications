@@ -35,7 +35,7 @@ spec:
         {{- if values.helm }}
         helm:
           valueFiles:
-          - values.yaml
+            - values.yaml
         {{- else }}
         path: '{{ path }}'
         repoURL: https://github.com/MatiWall/application-values.git
