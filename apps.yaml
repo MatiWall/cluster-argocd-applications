@@ -9,15 +9,6 @@ spec:
       repoURL: https://github.com/MatiWall/application-values.git
       revision: master
       directories:
-        - path: docker-registry
-      values:
-        namespace: docker-registry
-        name: docker-registry
-        helm: false
-  - git:
-      repoURL: https://github.com/MatiWall/application-values.git
-      revision: master
-      directories:
         - path: personal-website
       values:
         namespace: mw
