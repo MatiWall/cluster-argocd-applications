@@ -5,21 +5,16 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - helm:
-      valueFiles:
-      - values.yaml
-    git:
-      repoURL: https://github.com/MatiWall/application-values.git
-      path: personal-website
-      targetRevision: HEAD
   - git:
       repoURL: https://github.com/MatiWall/application-values.git
-      path: docker-registry
-      targetRevision: HEAD
-  - git:
-      repoURL: https://github.com/MatiWall/application-values.git
-      path: docker-registry-ui
-      targetRevision: HEAD
+      revision: main
+      paths:
+      - path: personal-website
+        helm:
+          valueFiles:
+          - values.yaml
+      - path: docker-registry
+      - path: docker-registry-ui
   template:
     metadata:
       name: '{{ .Parameters.repoName }}-{{ .Parameters.appName }}'
