@@ -13,7 +13,6 @@ spec:
       values:
         namespace: mw
         name: personal-website
-        helm: true
   template:
     metadata:
       name: '{{ values.name }}'
