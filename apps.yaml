@@ -8,7 +8,7 @@ spec:
   - git:
       repoURL: https://github.com/MatiWall/application-values.git
       revision: main
-      paths:
+      directories:
       - path: personal-website
         helm:
           valueFiles:
