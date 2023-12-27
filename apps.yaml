@@ -17,10 +17,10 @@ spec:
       repoURL: https://github.com/MatiWall/application-values.git
       revision: master
       directories:
-      - path: personal-website
-        #helm:
-        #  valueFiles:
-        #  - values.yaml
+        - path: personal-website
+          #helm:
+          #  valueFiles:
+          #  - values.yaml
       values:
         namespace: mw
   template:
