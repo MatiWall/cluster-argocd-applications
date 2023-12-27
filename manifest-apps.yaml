@@ -13,6 +13,13 @@ spec:
         - path: docker-registry-ui
       values:
         namespace: docker-registry
+  - git:
+      repoURL: https://github.com/MatiWall/application-values.git
+      revision: master
+      directories:
+        - path: grafana
+      values:
+        namespace: grafana
   template:
     metadata:
       name: '{{ path }}'
