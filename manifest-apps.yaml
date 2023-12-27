@@ -15,7 +15,7 @@ spec:
         namespace: docker-registry
   template:
     metadata:
-      name: '{{ .path.basename }}'
+      name: '{{ path }}'
     spec:
       destination:
         namespace: '{{ values.namespace }}'
