@@ -7,7 +7,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/MatiWall/application-values.git
-      revision: main
+      revision: master
       directories:
       - path: personal-website
         #helm:
