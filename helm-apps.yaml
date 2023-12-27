@@ -14,7 +14,7 @@ spec:
         namespace: mw
   template:
     metadata:
-      name: '{{ .path.basename }}'
+      name: '{{ path }}'
     spec:
       destination:
         namespace: '{{ values.namespace }}'
