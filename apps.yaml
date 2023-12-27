@@ -10,9 +10,9 @@ spec:
       revision: main
       directories:
       - path: personal-website
-        helm:
-          valueFiles:
-          - values.yaml
+        #helm:
+        #  valueFiles:
+        #  - values.yaml
       - path: docker-registry
       - path: docker-registry-ui
   template:
