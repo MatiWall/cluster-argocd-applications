@@ -12,6 +12,13 @@ spec:
         - path: personal-website
       values:
         namespace: mw
+  - git:
+      revision: master
+      repoURL: https://github.com/MatiWall/application-values.git
+      directories:
+        - path: grafana-dashboards
+      values:
+        namespace: grafana
   template:
     metadata:
       name: '{{ path }}'
