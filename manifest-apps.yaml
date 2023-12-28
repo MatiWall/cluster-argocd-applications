@@ -21,12 +21,12 @@ spec:
       values:
         namespace: grafana
   - git:
-    repoURL: https://github.com/MatiWall/application-values.git
-    revision: master
-    directories:
-      - path: prometheus
-    values:
-      namespace: monitoring
+      repoURL: https://github.com/MatiWall/application-values.git
+      revision: master
+      directories:
+        - path: prometheus
+      values:
+        namespace: monitoring
   template:
     metadata:
       name: '{{ path }}'
