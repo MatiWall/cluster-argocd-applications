@@ -33,7 +33,7 @@ spec:
       directories:
         - path: postgresql
       values:
-        namespace: postgresql
+        namespace: postgres
   template:
     metadata:
       name: '{{ path }}'
