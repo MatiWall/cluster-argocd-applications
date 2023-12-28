@@ -27,6 +27,13 @@ spec:
         - path: prometheus
       values:
         namespace: monitoring
+   - git:
+      repoURL: https://github.com/MatiWall/application-values.git
+      revision: master
+      directories:
+        - path: postgresql
+      values:
+        namespace: postgresql
   template:
     metadata:
       name: '{{ path }}'
