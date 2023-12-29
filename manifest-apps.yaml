@@ -48,6 +48,13 @@ spec:
           - path: traefik
         values:
           namespace: kube-system
+     - git:
+        repoURL: 'https://github.com/MatiWall/application-values.git'
+        revision: master
+        directories:
+          - path: opentelemetry
+        values:
+          namespace: monitoring
   template:
     metadata:
       name: '{{ path }}'
