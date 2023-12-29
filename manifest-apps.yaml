@@ -31,7 +31,7 @@ spec:
         repoURL: 'https://github.com/MatiWall/application-values.git'
         revision: master
         directories:
-          - path: test-app
+          - path: postgres
         values:
           namespace: postgres
   template:
