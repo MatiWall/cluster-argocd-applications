@@ -48,7 +48,7 @@ spec:
           - path: traefik
         values:
           namespace: kube-system
-     - git:
+    - git:
         repoURL: 'https://github.com/MatiWall/application-values.git'
         revision: master
         directories:
