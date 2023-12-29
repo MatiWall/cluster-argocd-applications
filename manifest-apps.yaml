@@ -41,6 +41,13 @@ spec:
           - path: postgres-ui
         values:
           namespace: postgres
+      - git:
+        repoURL: 'https://github.com/MatiWall/application-values.git'
+        revision: master
+        directories:
+          - path: traefik
+        values:
+          namespace: kube-system
   template:
     metadata:
       name: '{{ path }}'
