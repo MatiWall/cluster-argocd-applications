@@ -55,13 +55,13 @@ spec:
           - path: opentelemetry
         values:
           namespace: monitoring
-    - git:
-        repoURL: 'https://github.com/MatiWall/application-values.git'
-        revision: master
-        directories:
-          - path: elasticsearch
-        values:
-          namespace: monitoring
+   # - git:
+        #repoURL: 'https://github.com/MatiWall/application-values.git'
+        #revision: master
+        #directories:
+        #  - path: elasticsearch
+        #values:
+          #namespace: monitoring
   template:
     metadata:
       name: '{{ path }}'
