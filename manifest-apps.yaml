@@ -41,7 +41,7 @@ spec:
           - path: postgres-ui
         values:
           namespace: postgres
-      - git:
+    - git:
         repoURL: 'https://github.com/MatiWall/application-values.git'
         revision: master
         directories:
