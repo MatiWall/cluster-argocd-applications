@@ -19,6 +19,13 @@ spec:
         - path: grafana-dashboards
       values:
         namespace: grafana
+  - git:
+      revision: master
+      repoURL: https://github.com/MatiWall/application-values.git
+      directories:
+        - path: drunkenbets-frontned
+      values:
+        namespace: mw
   template:
     metadata:
       name: '{{ path }}'
