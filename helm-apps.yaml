@@ -10,7 +10,7 @@ spec:
       repoURL: https://github.com/MatiWall/application-values.git
       directories:
         - path: personal-website
-        - path: drunkenbets-frontend
+        #- path: drunkenbets-frontend
       values:
         namespace: mw
   - git:
