@@ -10,6 +10,7 @@ spec:
       repoURL: https://github.com/MatiWall/application-values.git
       directories:
         - path: personal-website
+        - path: drunkenbets-frontend
       values:
         namespace: mw
   - git:
@@ -19,13 +20,6 @@ spec:
         - path: grafana-dashboards
       values:
         namespace: grafana
-  - git:
-      revision: master
-      repoURL: https://github.com/MatiWall/application-values.git
-      directories:
-        - path: drunkenbets-frontned
-      values:
-        namespace: mw
   template:
     metadata:
       name: '{{ path }}'
