@@ -59,7 +59,7 @@ spec:
         repoURL: 'https://github.com/MatiWall/application-values.git'
         revision: master
         directories:
-          - path: elasticsearch
+          - path: loki
         values:
           namespace: monitoring
   template:
