@@ -51,6 +51,13 @@ spec:
           - path: prometheus
         values:
           namespace: monitoring
+     - git:
+        repoURL: 'https://github.com/MatiWall/application-values.git'
+        revision: master
+        directories:
+          - path: pypi
+        values:
+          namespace: pypi
   template:
     metadata:
       name: '{{ path }}'
