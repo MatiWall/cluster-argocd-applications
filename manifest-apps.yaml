@@ -58,6 +58,13 @@ spec:
           - path: pypi
         values:
           namespace: pypi
+    - git:
+        repoURL: 'https://github.com/MatiWall/application-values.git'
+        revision: master
+        directories:
+          - path: kafka
+        values:
+          namespace: kafka
   template:
     metadata:
       name: '{{ path }}'
