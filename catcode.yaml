@@ -1,0 +1,15 @@
+kind: Component
+metadata:
+  description: ArgoCD applicaitons
+  git: https://github.com/MatiWall/homelab.argocd-applications
+  system: homelab
+  application: configs
+  deployableUnit: argocd-applications
+  tags:
+  - ArgoCD
+  - yaml
+  - CD
+spec:
+  owner: mw
+  type: configuration
+  lifecycle: Development
