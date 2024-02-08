@@ -72,7 +72,7 @@ spec:
           - path: kafka-ui
         values:
           namespace: kafka
-     - git:
+    - git:
         repoURL: 'https://github.com/MatiWall/application-values.git'
         revision: master
         directories:
