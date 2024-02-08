@@ -72,6 +72,13 @@ spec:
           - path: kafka-ui
         values:
           namespace: kafka
+     - git:
+        repoURL: 'https://github.com/MatiWall/application-values.git'
+        revision: master
+        directories:
+          - path: vault
+        values:
+          namespace: vault
   template:
     metadata:
       name: '{{ path }}'
