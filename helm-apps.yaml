@@ -11,7 +11,7 @@ spec:
       directories:
         - path: personal-website
         - path: otel-test
-        - path: catcode
+        #- path: catcode
         #- path: drunkenbets-frontend
       values:
         namespace: mw
