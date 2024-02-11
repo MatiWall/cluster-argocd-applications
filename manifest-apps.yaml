@@ -77,7 +77,6 @@ spec:
         revision: master
         directories:
           - path: vault
-          - path: vault-injector
         values:
           namespace: vault
   template:
