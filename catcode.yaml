@@ -9,7 +9,7 @@ metadata:
   - ArgoCD
   - yaml
   - CD
-spec:
   owner: mw
+spec:
   type: configuration
   lifecycle: Development
