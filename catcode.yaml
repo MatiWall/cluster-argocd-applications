@@ -10,6 +10,6 @@ metadata:
   - yaml
   - CD
 spec:
-  owner: mw
   type: configuration
   lifecycle: Development
+  owner: mw
