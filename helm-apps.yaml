@@ -11,10 +11,16 @@ spec:
       directories:
         - path: personal-website
         - path: otel-test
-        - path: catcode
         #- path: drunkenbets-frontend
       values:
         namespace: mw
+  - git:
+      revision: master
+      repoURL: https://github.com/MatiWall/application-values.git
+      directories:
+        - path: catcode/backend/core-api
+      values:
+        namespace: catcode
   - git:
       revision: master
       repoURL: https://github.com/MatiWall/application-values.git
