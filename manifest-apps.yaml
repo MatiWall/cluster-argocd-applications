@@ -79,6 +79,13 @@ spec:
           - path: vault
         values:
           namespace: vault
+    - git:
+        repoURL: 'https://github.com/MatiWall/application-values.git'
+        revision: master
+        directories:
+          - path: catcode-backend-rabbitmq
+        values:
+          namespace: catcode
   template:
     metadata:
       name: '{{ path }}'
