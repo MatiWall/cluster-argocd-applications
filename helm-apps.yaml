@@ -19,6 +19,7 @@ spec:
       repoURL: https://github.com/MatiWall/application-values.git
       directories:
         - path: catcode-backend-core-api
+        - path: catcode-backend-dependencies
         - path: catcode-frontend-app
       values:
         namespace: catcode
