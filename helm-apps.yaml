@@ -51,7 +51,7 @@ spec:
         helm:
           valueFiles:
             - values.yaml
-        path: '{{ path.path }}'
+        path: '{{ .path.path }}'
         targetRevision: HEAD
       syncPolicy:
         automated:
