@@ -40,7 +40,7 @@ spec:
         namespace: vault
   template:
     metadata:
-      name: '{{ replace path "/" "-" }}'
+      name: '{{ path.basename }}'
     spec:
       destination:
         namespace: '{{ values.namespace }}'
