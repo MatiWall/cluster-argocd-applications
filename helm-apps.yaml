@@ -20,7 +20,7 @@ spec:
       directories:
         - path: catcode-backend-core-api
         - path: catcode-backend-dependencies
-        - path: catcode/backend/catdocs
+        - path: "catcode/backend/catdocs"
         - path: catcode-frontend-app
       values:
         namespace: catcode
