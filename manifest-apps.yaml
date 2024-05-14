@@ -86,6 +86,13 @@ spec:
           - path: rabbitmq
         values:
           namespace: rabbitmq
+    - git:
+        repoURL: 'https://github.com/MatiWall/application-values.git'
+        revision: master
+        directories:
+          - path: bind
+        values:
+          namespace: bind
   template:
     metadata:
       name: '{{ path }}'
