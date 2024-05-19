@@ -93,13 +93,6 @@ spec:
           - path: bind
         values:
           namespace: bind
-    - git:
-        repoURL: 'https://github.com/MatiWall/application-values.git'
-        revision: master
-        directories:
-          - path: argo/workflow/ingress
-        values:
-          namespace: argo
   template:
     metadata:
       name: '{{ path }}'
