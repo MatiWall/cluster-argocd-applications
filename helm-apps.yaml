@@ -40,7 +40,7 @@ spec:
       revision: master
       repoURL: https://github.com/MatiWall/application-values.git
       directories:
-        - path: argo/workflow/deployment
+        - path: argo/workflow/argo-workflow
       values:
         namespace: argo
   template:
