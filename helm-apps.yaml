@@ -36,6 +36,13 @@ spec:
         - path: vault-injector
       values:
         namespace: vault
+  - git:
+      revision: master
+      repoURL: https://github.com/MatiWall/application-values.git
+      directories:
+        - path: argo/workflow/deployment
+      values:
+        namespace: argo
   template:
     metadata:
       name: '{{ path.basename }}'
