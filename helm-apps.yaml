@@ -40,12 +40,12 @@ spec:
       revision: master
       repoURL: https://github.com/MatiWall/application-values.git
       directories:
-        - path: argo/workflow/argo-workflow
+        - path: argo/workflow/argo-workflow/*
       values:
         namespace: argo
   template:
     metadata:
-      name: '{{ path.basename }}'
+      name: '{{ path.basenameNormalized }}'
     spec:
       destination:
         namespace: '{{ values.namespace }}'
