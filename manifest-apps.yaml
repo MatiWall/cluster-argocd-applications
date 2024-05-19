@@ -102,7 +102,7 @@ spec:
           namespace: argo
   template:
     metadata:
-      name: '{{ path }}'
+      name: '{{ path.basename }}'
     spec:
       destination:
         namespace: '{{ values.namespace }}'
