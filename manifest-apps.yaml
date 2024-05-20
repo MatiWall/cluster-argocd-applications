@@ -98,6 +98,7 @@ spec:
         revision: master
         directories:
           - path: argo/workflow/workflow-templates
+          - path: argo/workflow/extras
         values:
           namespace: argo
   template:
