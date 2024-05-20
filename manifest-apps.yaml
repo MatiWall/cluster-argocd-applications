@@ -97,7 +97,7 @@ spec:
         repoURL: 'https://github.com/MatiWall/application-values.git'
         revision: master
         directories:
-          - path: argo/workflow/workflow-templates
+          - path: argo/workflow/argo-workflow-templates
           - path: argo/workflow/argo-workflow-extras
         values:
           namespace: argo
