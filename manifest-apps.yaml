@@ -101,6 +101,13 @@ spec:
           - path: argo/workflow/argo-workflow-extras
         values:
           namespace: argo
+    - git:
+        repoURL: 'https://github.com/MatiWall/application-values.git'
+        revision: master
+        directories:
+          - path: coredns
+        values:
+          namespace: kube-systems
   template:
     metadata:
       name: '{{ path.basename }}'
