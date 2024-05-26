@@ -43,6 +43,13 @@ spec:
         - path: argo/workflow/argo-workflow
       values:
         namespace: argo
+  - git:
+      revision: master
+      repoURL: https://github.com/MatiWall/application-values.git
+      directories:
+        - path: argo/events/argo-events
+      values:
+        namespace: argo
   template:
     metadata:
       name: '{{ path.basename }}'
