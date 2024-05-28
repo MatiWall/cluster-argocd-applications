@@ -1,0 +1,53 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: multiple-apps-set
+  namespace: argo
+spec:
+  generators:
+  - git:
+      revision: master
+      directories:
+        - path: grafana-dashboards
+      values:
+        namespace: grafana
+  - git:
+      revision: master
+      directories:
+        - path: vault-injector
+      values:
+        namespace: vault
+  - git:
+      revision: master
+      directories:
+        - path: argo/workflow/argo-workflow
+      values:
+        namespace: argo
+  - git:
+      revision: master
+      directories:
+        - path: argo/events/argo-events
+      values:
+        namespace: argo
+  template:
+    metadata:
+      name: '{{ path.basename }}'
+    spec:
+      destination:
+        namespace: '{{ values.namespace }}'
+        server: https://kubernetes.default.svc
+      project: default
+      source:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+        helm:
+          valueFiles:
+            - values.yaml
+        path: '{{ path }}'
+        targetRevision: HEAD
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+

@@ -22,34 +22,6 @@ spec:
         - path: "catcode/frontend/*"
       values:
         namespace: catcode
-  - git:
-      revision: master
-      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      directories:
-        - path: grafana-dashboards
-      values:
-        namespace: grafana
-  - git:
-      revision: master
-      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      directories:
-        - path: vault-injector
-      values:
-        namespace: vault
-  - git:
-      revision: master
-      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      directories:
-        - path: argo/workflow/argo-workflow
-      values:
-        namespace: argo
-  - git:
-      revision: master
-      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      directories:
-        - path: argo/events/argo-events
-      values:
-        namespace: argo
   template:
     metadata:
       name: '{{ path.basename }}'
@@ -59,6 +31,7 @@ spec:
         server: https://kubernetes.default.svc
       project: default
       source:
+        repoURL: https://github.com/MatiWall/application-values.git
         helm:
           valueFiles:
             - values.yaml
