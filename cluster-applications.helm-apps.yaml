@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: multiple-apps-set
+  name: cluster-applications-helm-apps-set
   namespace: argocd
 spec:
   generators:
