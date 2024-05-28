@@ -7,28 +7,28 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      revision: master
+      revision: main
       directories:
         - path: grafana-dashboards
       values:
         namespace: grafana
   - git:
       repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      revision: master
+      revision: main
       directories:
         - path: vault-injector
       values:
         namespace: vault
   - git:
       repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      revision: master
+      revision: main
       directories:
         - path: argo/workflow/argo-workflow
       values:
         namespace: argo
   - git:
       repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      revision: master
+      revision: main
       directories:
         - path: argo/events/argo-events
       values:
