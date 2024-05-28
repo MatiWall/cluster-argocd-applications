@@ -6,6 +6,7 @@ metadata:
 spec:
   generators:
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: docker-registry
@@ -13,30 +14,35 @@ spec:
         values:
           namespace: docker-registry
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: grafana
         values:
           namespace: grafana
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: postgres-db
         values:
           namespace: postgres
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: postgres-ui
         values:
           namespace: postgres
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: traefik
         values:
           namespace: kube-system
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: loki
@@ -46,36 +52,42 @@ spec:
         values:
           namespace: monitoring
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: pypi
         values:
           namespace: pypi
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: kafka
         values:
           namespace: kafka
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: kafka-ui
         values:
           namespace: kafka
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: vault
         values:
           namespace: vault
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: bind
         values:
           namespace: bind
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: argo/workflow/argo-workflow-templates
@@ -83,6 +95,7 @@ spec:
         values:
           namespace: argo
     - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: master
         directories:
           - path: coredns

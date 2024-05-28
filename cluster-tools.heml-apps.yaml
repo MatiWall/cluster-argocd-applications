@@ -2,28 +2,32 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: multiple-apps-set
-  namespace: argo
+  namespace: argocd
 spec:
   generators:
   - git:
+      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
       revision: master
       directories:
         - path: grafana-dashboards
       values:
         namespace: grafana
   - git:
+      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
       revision: master
       directories:
         - path: vault-injector
       values:
         namespace: vault
   - git:
+      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
       revision: master
       directories:
         - path: argo/workflow/argo-workflow
       values:
         namespace: argo
   - git:
+      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
       revision: master
       directories:
         - path: argo/events/argo-events
