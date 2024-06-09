@@ -24,7 +24,7 @@ spec:
         namespace: catcode
   template:
     metadata:
-      name: '{{ path.basename | replace "/" "-"}}'
+      name: "{{ strings.replaceAll(path.path, '/', '-')}}"
     spec:
       destination:
         namespace: '{{ values.namespace }}'
