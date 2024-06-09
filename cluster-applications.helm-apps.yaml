@@ -24,7 +24,7 @@ spec:
         namespace: catcode
   template:
     metadata:
-      name: '{{ path.basename }}'
+      name: '{{ path.basename | replace "/" "-"}}'
     spec:
       destination:
         namespace: '{{ values.namespace }}'
@@ -35,7 +35,7 @@ spec:
         helm:
           valueFiles:
             - values.yaml
-        path: '{{ path | replace "/" "-" }}'
+        path: '{{ path }}'
         targetRevision: HEAD
       syncPolicy:
         automated:
