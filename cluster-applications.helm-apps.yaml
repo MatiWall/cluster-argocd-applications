@@ -24,7 +24,7 @@ spec:
         namespace: catcode
   template:
     metadata:
-      name: "{{ path.basename }}
+      name: "{{ path.basename }}"
     spec:
       destination:
         namespace: '{{ values.namespace }}'
@@ -43,4 +43,3 @@ spec:
           selfHeal: true
         syncOptions:
           - CreateNamespace=true
-
