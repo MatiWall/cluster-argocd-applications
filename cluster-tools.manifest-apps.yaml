@@ -62,20 +62,6 @@ spec:
         repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: main
         directories:
-          - path: kafka
-        values:
-          namespace: kafka
-    - git:
-        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-        revision: main
-        directories:
-          - path: kafka-ui
-        values:
-          namespace: kafka
-    - git:
-        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-        revision: main
-        directories:
           - path: vault
         values:
           namespace: vault
