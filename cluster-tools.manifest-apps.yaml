@@ -87,6 +87,13 @@ spec:
           - path: coredns
         values:
           namespace: kube-systems
+    - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+        revision: main
+        directories:
+          - path: pulsar
+        values:
+          namespace: pulsar
   template:
     metadata:
       name: '{{ path.basename }}'
