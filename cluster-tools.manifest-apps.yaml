@@ -92,7 +92,6 @@ spec:
         revision: main
         directories:
           - path: pulsar/cluster
-          - path: pulsar/manager
         values:
           namespace: pulsar
   template:
