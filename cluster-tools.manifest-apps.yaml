@@ -91,7 +91,8 @@ spec:
         repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
         revision: main
         directories:
-          - path: pulsar
+          - path: pulsar/cluster
+          - path: pulsar/manager
         values:
           namespace: pulsar
   template:
