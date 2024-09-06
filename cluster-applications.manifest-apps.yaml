@@ -28,9 +28,9 @@ spec:
         server: 'https://kubernetes.default.svc'
       project: default
       source:
-        repoURL: '{{ repoURL }}'
+        repoURL: '{{ generator.repoURL }}'
         path: '{{ path }}'
-        targetRevision: master
+        targetRevision: '{{ generator.revision }}'
       syncPolicy:
         automated:
           prune: true
