@@ -16,7 +16,7 @@ spec:
         repoURL: 'https://github.com/MatiWall/CatCode.Platform.CrossPlaneTemplates.git'
         revision: main
         directories:
-          - path: './*'
+          - path: 'crds'
         values:
           namespace: catcode
   template:
