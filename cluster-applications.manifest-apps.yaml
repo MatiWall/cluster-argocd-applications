@@ -28,13 +28,48 @@ spec:
         server: 'https://kubernetes.default.svc'
       project: default
       source:
-        repoURL: '{{ generator.repoURL }}'
+        repoURL: 'https://github.com/MatiWall/application-values.git'
         path: '{{ path }}'
-        targetRevision: '{{ generator.revision }}'
+        targetRevision: master
       syncPolicy:
         automated:
           prune: true
           selfHeal: true
         syncOptions:
           - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cluster-applications-manifest-apps-set-crossplane
+  namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: 'https://github.com/MatiWall/CatCode.Platform.CrossPlaneTemplates.git'
+        revision: main
+        directories:
+          - path: crds
+        values:
+          namespace: catcode
+  template:
+    metadata:
+      name: '{{ path.basename }}'
+    spec:
+      destination:
+        namespace: '{{ values.namespace }}'
+        server: 'https://kubernetes.default.svc'
+      project: default
+      source:
+        repoURL: 'https://github.com/MatiWall/CatCode.Platform.CrossPlaneTemplates.git'
+        path: '{{ path }}'
+        targetRevision: main
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+
+
 
