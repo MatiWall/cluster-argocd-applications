@@ -12,6 +12,13 @@ spec:
           - path: rabbitmq
         values:
           namespace: rabbitmq
+    - git:
+        repoURL: 'https://github.com/MatiWall/CatCode.Platform.CrossPlaneTemplates.git'
+        revision: main
+        directories:
+          - path: './*'
+        values:
+          namespace: catcode
   template:
     metadata:
       name: '{{ path.basename }}'
