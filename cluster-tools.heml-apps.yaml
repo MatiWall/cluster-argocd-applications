@@ -26,13 +26,6 @@ spec:
         - path: argo/workflow/argo-workflow
       values:
         namespace: argo
-  - git:
-      repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
-      revision: main
-      directories:
-        - path: crossplane
-      values:
-        namespace: crossplane
   template:
     metadata:
       name: '{{ path.basename }}'
