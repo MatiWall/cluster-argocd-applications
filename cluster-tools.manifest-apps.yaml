@@ -94,6 +94,13 @@ spec:
           - path: pulsar/cluster
         values:
           namespace: pulsar
+    - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+        revision: main
+        directories:
+          - path: etcd
+        values:
+          namespace: catcode
   template:
     metadata:
       name: '{{ path.basename }}'
