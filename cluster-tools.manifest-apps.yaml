@@ -101,6 +101,13 @@ spec:
           - path: etcd
         values:
           namespace: catcode
+    - git:
+        repoURL: https://github.com/MatiWall/homelab.cluster-tools.application-values.git
+        revision: main
+        directories:
+          - path: verdaccio
+        values:
+          namespace: verdaccio
   template:
     metadata:
       name: '{{ path.basename }}'
